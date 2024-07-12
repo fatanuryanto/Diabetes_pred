@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Test Now</div>
+        <form action="/send" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="text" id="weight" name="Weight" placeholder="Enter your weight">
+            </div>
+            <div class="form-group">
+                <label for="height">Height</label>
+                <input type="text" id="height" name="Height" placeholder="Enter your height">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="Sex" value="0">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="Sex" value="1">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever diagnosed with high Blood Pressure?</label>
+                <div class="radio-group">
+                    <input type="radio" id="bp-no" name="HighBP" value="0">
+                    <label for="bp-no">No</label>
+                    <input type="radio" id="bp-yes" name="HighBP" value="1">
+                    <label for="bp-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever diagnosed with high Cholesterol?</label>
+                <div class="radio-group">
+                    <input type="radio" id="cholesterol-no" name="HighChol" value="0">
+                    <label for="cholesterol-no">No</label>
+                    <input type="radio" id="cholesterol-yes" name="HighChol" value="1">
+                    <label for="cholesterol-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever checking your Cholesterol in last 5 years?</label>
+                <div class="radio-group">
+                    <input type="radio" id="check-cholesterol-no" name="CholCheck" value="0">
+                    <label for="check-cholesterol-no">No</label>
+                    <input type="radio" id="check-cholesterol-yes" name="CholCheck" value="1">
+                    <label for="check-cholesterol-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever had a stroke?</label>
+                <div class="radio-group">
+                    <input type="radio" id="stroke-no" name="Stroke" value="0">
+                    <label for="stroke-no">No</label>
+                    <input type="radio" id="stroke-yes" name="Stroke" value="1">
+                    <label for="stroke-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you a heavy drinkers?</label>
+                <label>(adult men more than 14 times per weeks and adult women more than 7 times per weeks)</label>
+                <div class="radio-group">
+                    <input type="radio" id="drinkers-no" name="HvyAlcoholConsump" value="0">
+                    <label for="drinkers-no">No</label>
+                    <input type="radio" id="drinkers-yes" name="HvyAlcoholConsump" value="1">
+                    <label for="drinkers-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you have serious difficulties walking or climbing stairs?</label>
+                <div class="radio-group">
+                    <input type="radio" id="difficulties-no" name="Diffwalk" value="0">
+                    <label for="difficulties-no">No</label>
+                    <input type="radio" id="difficulties-yes" name="Diffwalk" value="1">
+                    <label for="difficulties-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever had Coronary Heart Disease or Myocardial Infarction?</label>
+                <div class="radio-group">
+                    <input type="radio" id="difficulties-no" name="HeartDiseaseorAttack" value="0">
+                    <label for="difficulties-no">No</label>
+                    <input type="radio" id="difficulties-yes" name="HeartDiseaseorAttack" value="1">
+                    <label for="difficulties-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you go to have a physical activity in this month?</label>
+                <div class="radio-group">
+                    <input type="radio" id="difficulties-no" name="PhysActivity" value="0">
+                    <label for="difficulties-no">No</label>
+                    <input type="radio" id="difficulties-yes" name="PhysActivity" value="1">
+                    <label for="difficulties-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Have you ever smoke at least 5 packs (100 cigar) in your life?</label>
+                <div class="radio-group">
+                    <input type="radio" id="difficulties-no" name="Smoker" value="0">
+                    <label for="difficulties-no">No</label>
+                    <input type="radio" id="difficulties-yes" name="Smoker" value="1">
+                    <label for="difficulties-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Would you say in general your health</label>
+                <div class="radio-group">
+                    <input type="radio" id="Health" name="GenHlth" value="1">
+                    <label for="Health">Excellent</label>
+                    <input type="radio" id="Health" name="GenHlth" value="2">
+                    <label for="Health">Very Good</label>
+                    <input type="radio" id="Health" name="GenHlth" value="3">
+                    <label for="Health">Good</label>
+                    <input type="radio" id="Health" name="GenHlth" value="4">
+                    <label for="Health">Fair</label>
+                    <input type="radio" id="Health" name="GenHlth" value="5">
+                    <label for="Health">Poor</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you eat one or more fruits every day?</label>
+                <div class="radio-group">
+                    <input type="radio" id="Fruits-no" name="Fruits" value="0">
+                    <label for="Fruits-no">No</label>
+                    <input type="radio" id="Fruits-yes" name="Fruits" value="1">
+                    <label for="Fruits-yes">Yes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you eat one or more vegetables every day?</label>
+                <div class="radio-group">
+                    <input type="radio" id="Veggies-no" name="Veggies" value="0">
+                    <label for="Veggies-no">No</label>
+                    <input type="radio" id="Veggies-yes" name="Veggies" value="1">
+                    <label for="Veggies-yes">Yes</label>
+            </div>
+            <div class="form-group">
+                <label>Now thinking about your mental health, which include stress, depression, and problems with emotions, for how many days during the past 30 was your mental health not good</label>
+                <input type="number" name="MenHlth" min="0" max="31">
+            </div>
+            <div class="form-group">
+                <label>Now thinking about your mental health, which include physical illness and injury for how many days during the past 30 was your physical health not good</label>
+                <input type="number" name="PhysHlth" min="0" max="31">
+            </div>
+            <div class="form-group">
+                <label>How old are you</label>
+                <div class="radio-group">
+                    <input type="radio" id="Age-1" name="Age" value="1">
+                    <label for="Age-1">18-24</label>
+                    <input type="radio" id="Age-2" name="Age" value="2">
+                    <label for="Age-2">25-29</label>
+                    <input type="radio" id="Age-3" name="Age" value="3">
+                    <label for="Age-3">30-34</label>
+                    <input type="radio" id="Age-4" name="Age" value="4">
+                    <label for="Age-4">35-39</label>
+                    <input type="radio" id="Age-5" name="Age" value="5">
+                    <label for="Age-5">40-44</label>
+                    <input type="radio" id="Age-6" name="Age" value="6">
+                    <label for="Age-6">45-49</label>
+                    <input type="radio" id="Age-7" name="Age" value="7">
+                    <label for="Age-7">50-54</label>
+                    <input type="radio" id="Age-8" name="Age" value="8">
+                    <label for="Age-8">55-59</label>
+                    <input type="radio" id="Age-9" name="Age" value="9">
+                    <label for="Age-9">60-64</label>
+                    <input type="radio" id="Age-10" name="Age" value="10">
+                    <label for="Age-10">65-69</label>
+                    <input type="radio" id="Age-11" name="Age" value="11">
+                    <label for="Age-11">70-74</label>
+                    <input type="radio" id="Age-12" name="Age" value="12">
+                    <label for="Age-12">75-79</label>
+                    <input type="radio" id="Age-13" name="Age" value="13">
+                    <label for="Age-13">80-older</label>
+                </div>
+            </div>
+            <button type="submit" value="Hitung">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

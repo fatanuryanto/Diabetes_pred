@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Form</title>
+        <style>
+            body {
+                
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height:auto;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            form {
+                width: 500px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px
+                    rgba(0, 0, 0, 0.1);
+            }
+
+            fieldset {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0;
+            }
+
+            legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea,
+            input[type="date"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="radio"] {
+                margin-left: 20px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/send" method="post">
+            <fieldset>
+                <legend>
+                    User personal information
+                </legend>
+                <label>Enter your full name</label>
+                <input type="text" name="name" />
+
+                <label>Enter your email</label>
+                <input type="email" name="email"/>
+
+                <label>Enter your Height (cm)</label>
+                <input type="number" name="Height"/>
+
+                <label>Enter your Weight</label>
+                <input type="number" name="Weight"/>
+
+                <label>Enter your gender</label>
+                <input type="radio" name="Sex" value="0">Male
+                <input type="radio" name="Sex" value="1">Female
+
+                <br>
+                <label>Have you ever diagnosed with high Blood Pressure?</label>
+                <input type="radio" name="HighBP" value="1">Yes
+                <input type="radio" name="HighBP" value="0">No
+                
+                <label>Have you ever diagnosed with high Cholesterol?</label>
+                <input type="radio" name="HighChol" value="1">Yes
+                <input type="radio" name="HighChol" value="0">No
+
+                <label>Have you ever checking your Cholesterol in last 5 years?</label>
+                <input type="radio" name="CholCheck" value="1">Yes
+                <input type="radio" name="CholCheck" value="0">No
+
+                <label>Have you ever smoke at least 5 packs (100 cigar) in your life?</label>
+                <input type="radio" name="Smoker" value="1">Yes
+                <input type="radio" name="Smoker" value="0">No
+
+                <label>Have you ever had a stroke?</label>
+                <input type="radio" name="Stroke" value="1">Yes
+                <input type="radio" name="Stroke" value="0">No
+
+                <label>Have you ever had Coronary Heart Disease or Myocardial Infarction?</label>
+                <input type="radio" name="HeartDiseaseorAttack" value="1">Yes
+                <input type="radio" name="HeartDiseaseorAttack" value="0">No
+
+                <label>Have you go to have a physical activity in this month?</label>
+                <input type="radio" name="PhysActivity" value="1">Yes
+                <input type="radio" name="PhysActivity" value="0">No
+
+                <label>Do you eat one or more fruits every day?</label>
+                <input type="radio" name="Fruits" value="1">Yes
+                <input type="radio" name="Fruits" value="0">No
+
+                <label>In your daily life, have you eat one or more vegetables?</label>
+                <input type="radio" name="Veggies" value="1" >Yes
+                <input type="radio" name="Veggies" value="0">No
+
+                <label>Do you a heavy drinkers?</label>
+                <label>(adult men more than 14 times per weeks and adult women more than 7 times per weeks)</label>
+                <input type="radio" name="HvyAlcoholConsump" value="1">Yes
+                <input type="radio" name="HvyAlcoholConsump" value="0">No
+                
+                <label>How old are you?</label>
+                <input type="radio" name="Age" value="1">18-24
+                <input type="radio" name="Age" value="2">25-29
+                <input type="radio" name="Age" value="3">30-34
+                <input type="radio" name="Age" value="4">35-39
+                <input type="radio" name="Age" value="5">40-44
+                <input type="radio" name="Age" value="6">45-49
+                <input type="radio" name="Age" value="7">50-54
+                <input type="radio" name="Age" value="8">55-59
+                <input type="radio" name="Age" value="9">60-64
+                <input type="radio" name="Age" value="10">65-69
+                <input type="radio" name="Age" value="11">70-74
+                <input type="radio" name="Age" value="12">75-79
+                <input type="radio" name="Age" value="13">80 - older
+
+                <label>Would you say in general your health GenHlth?</label>
+                <input type="radio" name="GenHlth" value="1">Excellent
+                <input type="radio" name="GenHlth" value="2">Very Good
+                <input type="radio" name="GenHlth" value="3">Good
+                <input type="radio" name="GenHlth" value="4">Fair
+                <input type="radio" name="GenHlth" value="5">Poor
+
+                <label>Do you have serious difficulties walking or climbing stairs?</label>
+                <input type="radio" name="Diffwalk" value="1" >Yes
+                <input type="radio" name="Diffwalk" value="0">No   
+
+                <label>Now thinking about your mental health, which include stress, depression, and problems with emotions, for how many days during the past 30 was your mental health not good</label>
+                <div class="slidecontainer">
+                    <input type="range" name="MenHlth" min="1" max="30" value="15" class="slider" id="myRange">
+                    <p>Value: <span id="demo"></span></p>
+                </div>
+                 
+                <label>Now thinking about your mental health, which include physical illness and injury for how many days during the past 30 was your physical health not good</label>
+                <div class="slidecontainer">
+                    <input type="range" name="PhysHlth" min="1" max="30" value="15" class="slider" id="physical">
+                    <p>Value: <span id="sum"></span></p>
+                </div>
+
+                <input type="submit" value="Hitung">
+            </fieldset>
+        </form>
+        <script>
+            var slider_physical = document.getElementById("physical");
+            var output_physical = document.getElementById("sum");
+            output_physical.innerHTML = slider_physical.value;
+            
+            slider_physical.oninput = function() {
+                output_physical.innerHTML = this.value;
+            }
+
+            var slider_mental = document.getElementById("myRange");
+            var output_mental = document.getElementById("demo");
+            output_mental.innerHTML = slider_mental.value;
+            
+            slider_mental.oninput = function() {
+            output_mental.innerHTML = this.value;
+            }
+       </script>  
+    </body>
+
+</html>
